@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Excellence Landromat - Our pricing</title>  
+      <!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="x/icon" href="../assets/favicon/favicon.ico.png" />
+    <link href="../styling/styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+        :root {
+  --blue-primary: #144995;
+  --blue-dark: #283a57;
+  --blue-secondary: #415574;
+  --blue-medium: #5075a6;
+  --blue-soft: #7393c3;
+
+  --bg-light: #f4f7fc;
+  --bg-section: #dce7f4;
+  --bg-accent: #98b3d9;
+  --bg-gradient-light: #bbcde5;
+
+  --text-dark: #121e33;
+  --text-secondary: #747d8e;
+  --text-muted: #9ca3b0;
+}
+/* GRID - Main Grid ========================*/
+.grid-container {
+  display: grid;
+
+  grid-template-areas:
+    "navbar navbar"
+    "pricing pricing"
+    "pricing-list pricing-list"
+    "footer footer"
+    "header-bottom header-bottom";
+}
+
+
+/* GRID - hero-pricing ========================*/
+
+.hero-pricing {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  text-align: center;
+  min-height: 45vh;
+  padding-top: 60px;
+  margin-top: 75px;
+  background-image: url(../assets/images/hero-background-image.jpg);
+  background-size: cover; /* Ensures the image covers the element */
+  background-position: center; /* Keeps the image centered */
+  background-repeat: no-repeat; /* Prevents tiling */
+}
+.pricing-item {
+ margin: 10px 10px;
+  padding: 5px 15px;
+  background: var(--bg-light);
+  border-radius: 10px;
+  opacity: 0.8;
+}
+
+.pricing-item > h1 {
+  font-weight: 700;
+  font-size: 35px;
+  color: var(--blue-dark);
+  animation: fadeIn 3s ease-in-out;
+
+}
+.pricing-item > p {
+  font-weight: 700;
+  margin-bottom: 35px;
+ color: var(--blue-dark);
+ animation: fadeIn 2s ease-in-out;
+
+}
+
+/* GRID - pricing-list ========================*/
+.grid-pricing-list{
+    display: grid;
+   justify-items: center;
+   align-items: start;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--bg-light);
+  
+}
+.pricing-list-item{
+ margin: 15px 15px;
+ padding: 15px 15px;
+  max-width: 700px;
+}
+.pricing-list-item > h2{
+    font-weight: 700;
+ color: var(--blue-primary); 
+ margin-bottom: 20px;
+ animation: fadeIn 4s ease-in-out;
+    
+}
+.pricing-list-item > p{
+    font-weight: 700;
+ color: var(--text-secondary); 
+ margin-bottom: 20px;
+ animation: fadeIn 3s ease-in-out;
+}
+
+/* CSS Accordion ========================*/
+.accordion {
+  background-color: var(--blue-soft);
+  color: var(--bg-light);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  border-radius: 5px;
+  font-weight: 700;
+  animation: fadeIn 2s ease-in-out;
+  margin-bottom: 5px;
+}
+
+.active, .accordion:hover {
+  background-color: var(--blue-secondary);
+}
+
+.accordion:after {
+  content: '\002B';
+  color:var(--bg-light);
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: var(--bg-gradient-light);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.8s ease-out;
+}
+
+/* MEDIA QUERIES ========================*/
+
+@media (max-width: 961px) {
+
+   .grid-pricing-list{
+   display: grid;
+   justify-items: center;
+   align-items: start;
+   grid-template-columns: 1fr;
+  background-color: var(--bg-light);
+  
+}
+
+}
+</style>  
+  </head>
+  
+  <body>
+    <!-- Section Main Grid -->
+    <div class="grid-container">
+      <!-- Section navigation -->
+      <div class="grid-item flex-navbar" style="grid-area: navbar;">
+          <div class="outter-nav logo">
+            <a href="../index.html"><img src="../assets/images/logo-navbar.png" alt="logo-image"/></a> 
+          </div>
+
+          <!-- hamburger navigation -->
+         <div class="hamburger">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+              <span></span>
+            </label>
+          <div class="inner-nav">
+              <div class="inner-nav-item">
+                <li><a href="../index.html">Home</a></li>
+              </div>
+              <div class="inner-nav-item ">
+                <li><a href="./services.html">Services</a></li>
+              </div>
+              <div class="inner-nav-item active-page">
+                <li><a href="./pricing.html">Pricing</a></li>
+              </div>
+              <div class="inner-nav-item">
+                <li><a href="./about.html">About Us</a></li>
+              </div>
+              <div class="inner-nav-item">
+                <li><a href="./contact.html">Contact Us</a></li>
+              </div>
+              <div class="inner-nav-item">
+                <li><a target="_blank" href="https://wa.me/+27748368368"><button class="flex-button"><img src="../assets/icons/whatsapp-icon.PNG" alt="whatsapp-icon">Chat on WhatsApp</button></a></li>
+              </div>
+          </div>
+        </div>  
+      </div>
+      <!-- Hero pricing Section  -->
+      <div class="grid-item hero-pricing" style="grid-area: pricing;">
+      
+          <div class="pricing-item">
+             <h1>Our Pricing</h1>
+             <p>Affordable and Transparent Prices for all our Servies.</p>
+          </div>
+      </div>
+ 
+      <!-- Pricing List Section  -->
+      <div class="grid-item grid-pricing-list" style="grid-area: pricing-list;">
+        
+        <!-- Laundry services prices -->
+        <div class="pricing-list-item">
+            <h2>Laundry Services Prices</h2>
+            <p>Affordable laundry services prices for all.</p>
+            <button class="accordion">Drop & Collect</button>
+            <div class="panel">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            
+            <button class="accordion">Self-washing</button>
+            <div class="panel">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            
+            <button class="accordion">Ironing</button>
+            <div class="panel">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div> 
+            <button class="accordion">Pick-up and Return</button>
+            <div class="panel">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div> 
+          </div> 
+          <!-- Coffee Bar Prices   -->
+          <div class="pricing-list-item">
+            <h2>Coffee Bar Prices</h2>
+            <p>Enjoy an affordable cup of freshly brewed tea, or a light snack while you await your laundry.</p>
+            <button class="accordion">Coffee</button>
+            <div class="panel">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <button class="accordion">Tea</button>
+            <div class="panel">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <button class="accordion">Snacks</button>
+            <div class="panel">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+          </div>         
+      </div>
+       
+      <!-- Section footer -->
+      <div class="grid-item footer" style="grid-area: footer">
+        <div class="footer-list">
+          <ul class="footer-item footer-logo">
+            <li><a href="../index.html"><img src="../assets/images/logo-footer.png" alt="footer-logo"/></a></li>
+          </ul>
+        </div>
+        <div class="footer-list">
+          <ul class="footer-item">
+            <li><h2>MENU</h2></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./pricing.html">Pricing</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./contact.html">Contact Us</a></li>
+            <li><a target="_blank" href="https://armel-nzawou-developer.github.io/ArmelDesign/"> <span style="color:#bd9c78;">Design by ArmelDesign★</span> </a></li>
+          </ul>
+        </div>
+        <div class="footer-list">
+          <ul class="footer-item">
+            <li><h2>QUICK LINKS</h2></li>
+            <li><a href="#">Drop & Collect</a></li>
+            <li><a href="./deliveries.html">Pick-up & return</a></li>
+            <li><a href="#">Terms and Conditions</a></li>
+          </ul>
+        </div>
+        <div class="footer-list">
+          <ul class="footer-item">
+            <li><h2>CONNECT</h2></li>
+            <li class="footer-icons"><img src="../assets/icons/phone-footer-icon.PNG" alt="phone-footer-icon"/><a href="tel:+27 (91) - 911 - 9191 "><p>+27 (91) - 911 - 9191</p></a></li>
+            <li class="footer-icons"><img src="../assets/icons/email-footer-icon.PNG" alt="email-footer-icon"/><a href="mailto:info@carrental.com"><p>info@excellencelaundry.com</p></a></li>
+            <li class="footer-icons"><img src="../assets/icons/calendar-footer-icon.PNG" alt="calendar-icon"/> <p>Mon - Fri, 07:00 AM - 06:00 PM</p></li>
+            <li class="footer-icons"><img src="../assets/icons/calendar-footer-icon.PNG" alt="calendar-icon"/> <p>Sat - Sun, 08:00 AM - 01:00 PM</p></li>
+            <li class="footer-icons">
+              <a target="_blank" href="https://www.facebook.com/"><img src="../assets/icons/facebook-footer-icon.png" alt="facebook-footer-icon"/></a>
+              <a target="_blank" href="https://www.instagram.com/"><img src="../assets/icons/instagram-footer-icon.png" alt="instagram-footer-icon"/></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Section header bottom -->
+      <div class="grid-item header-bottom" style="grid-area: header-bottom">
+        <div class="outter-bottom">
+          <img src="../assets/icons/whatsapp-icon.PNG"  alt="whatsapp-icon"/>
+          <a target="_blank" href="https://wa.me/+27748368368">Chat on WhatsApp</a>
+        </div>
+        <div class="inner-bottom">
+          <div class="inner-bottom-item">
+            <img src="../assets/icons/location-bottom-icon.PNG" alt="location-bottom-icon" />
+            <p>1234 Main St. Haston City, State 12345 |</p>
+          </div>
+          <div class="inner-bottom-item">
+            <p> © 2025 Excellence Laundry |</p>
+          </div>
+          <div class="inner-bottom-item">
+            <p>All Rights Reserved. </p>
+          </div>
+        </div>
+      </div>
+    </div> 
+    
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+          });
+        }
+        </script>
+  </body>
+</html>
+  </body>
+</html>

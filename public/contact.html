@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Excellence Landromat - Contact Us</title>  
+      <!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="x/icon" href="../assets/favicon/favicon.ico.png" />
+    <link href="../styling/styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+        :root {
+  --blue-primary: #144995;
+  --blue-dark: #283a57;
+  --blue-secondary: #415574;
+  --blue-medium: #5075a6;
+  --blue-soft: #7393c3;
+
+  --bg-light: #f4f7fc;
+  --bg-section: #dce7f4;
+  --bg-accent: #98b3d9;
+  --bg-gradient-light: #bbcde5;
+
+  --text-dark: #121e33;
+  --text-secondary: #747d8e;
+  --text-muted: #9ca3b0;
+}
+/* GRID - Main Grid ========================*/
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "navbar navbar"
+    "hero-contact hero-contact"
+    "contact contact"
+    "footer footer"
+    "header-bottom header-bottom";
+}
+
+
+/* GRID - hero-about ========================*/
+
+.hero-contact {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  text-align: center;
+  min-height: 45vh;
+  padding-top: 60px;
+  margin-top: 75px;
+  background-image: url(../assets/images/hero-background-image.jpg);
+  background-size: cover; /* Ensures the image covers the element */
+  background-position: center; /* Keeps the image centered */
+  background-repeat: no-repeat; /* Prevents tiling */
+}
+.hero-contact-item {
+ margin: 10px 10px;
+  padding: 5px 15px;
+  background: var(--bg-light);
+  border-radius: 10px;
+  opacity: 0.8;
+}
+
+.hero-contact-item > h1 {
+  font-weight: 700;
+  font-size: 35px;
+  color: var(--blue-dark);
+  animation: fadeIn 3s ease-in-out;
+
+}
+.hero-contact-item > p {
+  font-weight: 700;
+  margin-bottom: 35px;
+ color: var(--blue-dark);
+ animation: fadeIn 2s ease-in-out;
+
+}
+
+/* GRID - grid-contact ========================*/
+
+.grid-contact{
+
+    display: grid;
+    justify-items: center;
+    grid-template-columns:  1fr;
+    gap: 10px;
+    background-color: var(--bg-light);
+    animation: fadeIn 1s ease-in-out;
+}
+.contact-item {
+
+    
+}
+
+/* CSS Contact form ========================*/
+/* Clean & fresh contact page — Commercial Laundry
+   Palette: Soft blues, crisp whites, and airy spacing
+   Fonts: System UI stack for speed and clarity
+*/
+
+:root {
+  --bg: #f7fbff;
+  --panel: #ffffff;
+  --primary: #1f6fb2;
+  --primary-600: #185a8f;
+  --accent: #7ec8e3;
+  --text: #1a2a3a;
+  --muted: #6b7a8c;
+  --border: #e6eef6;
+  --success: #18a27b;
+  --shadow: 0 10px 30px rgba(17, 51, 83, 0.12);
+  --radius: 14px;
+  --radius-sm: 10px;
+  --max: 1100px;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  background: linear-gradient(180deg, #7393c3 0%, #eef7ff 100%);
+  color: var(--text);
+  font-family: ui-sans-serif, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.6;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+/* Header */
+.contact-header {
+  max-width: var(--max);
+  margin: 40px auto 20px;
+  padding: 0 24px;
+  display: grid;
+  gap: 12px;
+}
+
+/* .contact-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--primary);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.contact-badge::before {
+  content: "";
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, var(--accent), var(--primary));
+  box-shadow: 0 4px 12px rgba(31, 111, 178, 0.25);
+} */
+
+.contact-title {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin: 0;
+  color:var(--blue-primary);
+}
+
+.contact-sub {
+  color: var(--blue-primary);
+  max-width: 60ch;
+}
+
+/* Layout */
+.contact-wrap {
+  max-width: var(--max);
+  margin: 0 auto 60px;
+  padding: 0 24px;
+
+
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr;
+  gap: 24px;
+  
+}
+
+@media (max-width: 980px) {
+  .contact-grid { grid-template-columns: 1fr; }
+}
+
+/* Card base */
+.card {
+  background: var(--blue-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+/* Contact info */
+.info-card {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.info-hero {
+  position: relative;
+  min-height: 180px;
+  background:
+    /* linear-gradient(180deg, rgba(31,111,178,0.25), rgba(31,111,178,0.05)), */
+    url(../assets/images/hero-background-image.jpg) center/cover no-repeat; /* replace with your asset */
+}
+
+.info-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(1200px 400px at 10% 0%, rgba(126,200,227,0.5) 0%, transparent 60%);
+}
+
+.info-content {
+  padding: 26px;
+  display: grid;
+  gap: 16px;
+}
+
+.info-list {
+  display: grid;
+  gap: 14px;
+}
+
+.info-item {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  align-items: start;
+  gap: 14px;
+}
+
+.icon {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-sm);
+  background:var(--blue-dark);
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(31, 111, 178, 0.25);
+}
+
+.info-item h4 {
+  margin: 0;
+  font-size: 16px;
+  color: var(--bg-light);
+  font-weight: 700;
+}
+
+.info-item p {
+  margin: 4px 0 0;
+  color: var(--bg);
+}
+
+/* Map */
+.map {
+  border-top: 1px solid var(--border);
+  height: 250px;
+  background:
+    linear-gradient(180deg, rgba(31,111,178,0.06), rgba(31,111,178,0.03));
+}
+
+.map iframe,
+.map img { width: 100%; height: 100%; border: 0; display: block; }
+
+/* Form */
+.form-card {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.form-header {
+  padding: 24px 26px 0;
+}
+
+.form-header h3{
+  margin: 0;
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--bg-light);
+}
+
+.form {
+  padding: 20px 26px 26px;
+  display: grid;
+  gap: 16px;
+}
+
+.form-row {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 620px) {
+  .form-row { grid-template-columns: 1fr; }
+}
+
+.label {
+  font-size: 13px;
+  color: var(--bg-light);
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg-light);
+  color: var(--blue-dark);
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 120ms ease;
+}
+
+.input::placeholder,
+.textarea::placeholder { color: var(--blue-dark); }
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--blue-dark);
+  box-shadow: 0 0 0 6px rgba(31, 111, 178, 0.12);
+}
+
+.textarea { min-height: 140px; resize: vertical; }
+
+/* Microcopy */
+.microcopy {
+  font-size: 12px;
+  color: var(--bg);
+}
+
+/* CTA */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--blue-primary), var(--blue-primary));
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: transform 140ms ease, box-shadow 180ms ease, filter 180ms ease;
+  box-shadow: 0 10px 22px rgba(31, 111, 178, 0.25);
+}
+
+.btn:hover { transform: translateY(-1px); filter: brightness(1.05); background: var(--blue-dark); }
+.btn:active { transform: translateY(0); box-shadow: 0 8px 18px var(--blue-dark); }
+
+.btn--full { width: 100%; }
+
+/* Footer note */
+.contact-footer {
+  max-width: var(--max);
+  margin: 0 auto 40px;
+  padding: 0 24px;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+
+/* Optional: subtle animated bubbles for “fresh” feel */
+.bubbles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.bubble {
+  position: absolute;
+  bottom: -40px;
+  width: 10px;
+  height: 10px;
+  background: var(--bg-light);
+  border-radius: 50%;
+  animation: rise 12s linear infinite;
+  filter: blur(0.3px);
+}
+.bubble:nth-child(2) { left: 20%; animation-duration: 10s; width: 8px; height: 8px; }
+.bubble:nth-child(3) { left: 45%; animation-duration: 14s; width: 12px; height: 12px; }
+.bubble:nth-child(4) { left: 70%; animation-duration: 11s; width: 9px; height: 9px; }
+.bubble:nth-child(5) { left: 85%; animation-duration: 13s; width: 7px; height: 7px; }
+
+@keyframes rise {
+  0%   { transform: translateY(0) translateX(0); opacity: 0.8; }
+  50%  { transform: translateY(-50vh) translateX(-8px); opacity: 0.7; }
+  100% { transform: translateY(-100vh) translateX(8px); opacity: 0.0; }
+}
+
+/* KEYFRAMES ========================*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>  
+  </head>
+  <body>
+    <!-- Section Main Grid -->
+    <div class="grid-container">
+      <!-- Section navigation -->
+      <div class="grid-item flex-navbar" style="grid-area: navbar;">
+          <div class="outter-nav logo">
+            <a href="../index.html"><img src="../assets/images/logo-navbar.png" alt="logo-image"/></a> 
+          </div>
+
+          <!-- hamburger navigation -->
+         <div class="hamburger">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+              <span></span>
+            </label>
+          <div class="inner-nav">
+              <div class="inner-nav-item">
+                <li><a href="../index.html">Home</a></li>
+              </div>
+              <div class="inner-nav-item ">
+                <li><a href="./services.html">Services</a></li>
+              </div>
+              <div class="inner-nav-item ">
+                <li><a href="./pricing.html">Pricing</a></li>
+              </div>
+              <div class="inner-nav-item ">
+                <li><a href="./about.html">About Us</a></li>
+              </div>
+              <div class="inner-nav-item active-page">
+                <li><a href="./contact.html">Contact Us</a></li>
+              </div>
+              <div class="inner-nav-item">
+                <li><a target="_blank" href="https://wa.me/+27748368368"><button class="flex-button"><img src="../assets/icons/whatsapp-icon.PNG" alt="whatsapp-icon">Chat on WhatsApp</button></a></li>
+              </div>
+          </div>
+        </div>  
+      </div>
+      <!-- Hero Contact  -->
+      <div class="grid-item hero-contact" style="grid-area: hero-contact;">
+      
+          <div class="hero-contact-item">
+             <h1>Contact Us</h1>
+             <p>Get in touch with Excellence Laundry and Coffe Bar.</p>
+          </div>
+      </div>
+      <!-- Contact Section  -->
+      <div class="grid-item grid-contact" style="grid-area: contact;">
+          <div class="about-item">
+            <!-- Header -->
+<section class="contact-header">
+  <!-- <span class="contact-badge">Contact</span> -->
+  <h1 class="contact-title">Fresh, friendly laundry care — get in touch</h1>
+  <p class="contact-sub">Questions, pickups, commercial quotes or account support. We’ll respond within one business day.</p>
+</section>
+
+<!-- Content -->
+<section class="contact-wrap">
+  <div class="contact-grid">
+    <!-- Info + Map -->
+    <article class="card info-card">
+      <div class="info-hero">
+        <div class="bubbles">
+          <span class="bubble"></span><span class="bubble"></span>
+          <span class="bubble"></span><span class="bubble"></span><span class="bubble"></span>
+        </div>
+      </div>
+      <div class="info-content">
+        <div class="info-list">
+          <div class="info-item">
+            <div class="icon">📍</div>
+            <div>
+              <h4>Address</h4>
+              <p>1234 Clean St, Laundryville</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="icon">☎️</div>
+            <div>
+              <h4>Phone</h4>
+              <p>(123) 456-7890</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="icon">📧</div>
+            <div>
+              <h4>Email</h4>
+              <p>hello@laundrypro.com</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="icon">🕒</div>
+            <div>
+              <h4>Hours</h4>
+              <p>Mon–Sat: 7:00–20:00 • Sun: 9:00–17:00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="map">
+        <!-- Replace with an embedded map or a static image -->
+        <!-- <iframe src="https://maps.example.com/embed" title="Map"></iframe> -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d828.9195103319754!2d18.4966181!3d-33.7948114!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dccf522e5e12c75%3A0x50c04a844ba4af1d!2sExcellence%20Laundromat!5e0!3m2!1sen!2sza!4v1766944717637!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </article>
+
+    <!-- Form -->
+    <article class="card form-card">
+      <div class="form-header">
+        <h3>Send us a message</h3>
+      </div>
+      <form class="form" action="#" method="post" novalidate>
+        <div class="form-row">
+          <div>
+            <label class="label" for="name">Name</label>
+            <input class="input" id="name" name="name" type="text" placeholder="Your name" required>
+          </div>
+          <div>
+            <label class="label" for="email">Email</label>
+            <input class="input" id="email" name="email" type="email" placeholder="you@example.com" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div>
+            <label class="label" for="phone">Phone</label>
+            <input class="input" id="phone" name="phone" type="tel" placeholder="+27 21 000 0000" required>
+          </div>
+          <div>
+            <label class="label" for="company">Company (optional)</label>
+            <input class="input" id="company" name="company" type="text" placeholder="Business name">
+          </div>
+        </div>
+        <div>
+          <label class="label" for="message">Message</label>
+          <textarea class="textarea" id="message" name="message" placeholder="Tell us about your laundry needs…" required></textarea>
+        </div>
+        <p class="microcopy">By submitting, you agree to be contacted regarding your inquiry.</p>
+        <button class="btn btn--full" type="submit">Send message</button>
+      </form>
+    </article>
+  </div>
+</section>
+
+<!-- Footer note -->
+<p class="contact-footer">Need pickup today? Call us — we’re often faster than email.</p>
+          </div>
+        </div>
+       
+        <!-- Section footer -->
+        <div class="grid-item footer" style="grid-area: footer">
+          <div class="footer-list">
+            <ul class="footer-item footer-logo">
+              <li><a href="../index.html"><img src="../assets/images/logo-footer.png" alt="footer-logo"/></a></li>
+            </ul>
+          </div>
+          <div class="footer-list">
+            <ul class="footer-item">
+              <li><h2>MENU</h2></li>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="./services.html">Services</a></li>
+              <li><a href="./pricing.html">Pricing</a></li>
+              <li><a href="./about.html">About Us</a></li>
+              <li><a href="./contact.html">Contact Us</a></li>
+              <li><a target="_blank" href="https://armel-nzawou-developer.github.io/ArmelDesign/"> <span style="color:#bd9c78;">Design by ArmelDesign★</span> </a></li>
+            </ul>
+          </div>
+          <div class="footer-list">
+            <ul class="footer-item">
+              <li><h2>QUICK LINKS</h2></li>
+              <li><a href="#">Drop & Collect</a></li>
+              <li><a href="./deliveries.html">Pick-up & return</a></li>
+              <li><a href="#">Terms and Conditions</a></li>
+            </ul>
+          </div>
+          <div class="footer-list">
+            <ul class="footer-item">
+              <li><h2>CONNECT</h2></li>
+              <li class="footer-icons"><img src="../assets/icons/phone-footer-icon.PNG" alt="phone-footer-icon"/><a href="tel:+27 (91) - 911 - 9191 "><p>+27 (91) - 911 - 9191</p></a></li>
+              <li class="footer-icons"><img src="../assets/icons/email-footer-icon.PNG" alt="email-footer-icon"/><a href="mailto:info@carrental.com"><p>info@excellencelaundry.com</p></a></li>
+              <li class="footer-icons"><img src="../assets/icons/calendar-footer-icon.PNG" alt="calendar-icon"/> <p>Mon - Fri, 07:00 AM - 06:00 PM</p></li>
+              <li class="footer-icons"><img src="../assets/icons/calendar-footer-icon.PNG" alt="calendar-icon"/> <p>Sat - Sun, 08:00 AM - 01:00 PM</p></li>
+              <li class="footer-icons">
+                <a target="_blank" href="https://www.facebook.com/"><img src="../assets/icons/facebook-footer-icon.png" alt="facebook-footer-icon"/></a>
+                <a target="_blank" href="https://www.instagram.com/"><img src="../assets/icons/instagram-footer-icon.png" alt="instagram-footer-icon"/></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      <!-- Section header bottom -->
+      <div class="grid-item header-bottom" style="grid-area: header-bottom">
+        <div class="outter-bottom">
+          <img src="../assets/icons/whatsapp-icon.PNG"  alt="whatsapp-icon"/>
+          <a target="_blank" href="https://wa.me/+27748368368">Chat on WhatsApp</a>
+        </div>
+        <div class="inner-bottom">
+          <div class="inner-bottom-item">
+            <img src="../assets/icons/location-bottom-icon.PNG" alt="location-bottom-icon" />
+            <p>1234 Main St. Haston City, State 12345 |</p>
+          </div>
+          <div class="inner-bottom-item">
+            <p> © 2025 Excellence Laundry |</p>
+          </div>
+          <div class="inner-bottom-item">
+            <p>All Rights Reserved. </p>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </body>
+</html>
+  </body>
+</html>

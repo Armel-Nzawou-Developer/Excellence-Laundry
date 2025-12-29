@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Excellence Landromat - About Us</title>  
+      <!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="x/icon" href="../assets/favicon/favicon.ico.png" />
+    <link href="../styling/styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+        :root {
+  --blue-primary: #144995;
+  --blue-dark: #283a57;
+  --blue-secondary: #415574;
+  --blue-medium: #5075a6;
+  --blue-soft: #7393c3;
+
+  --bg-light: #f4f7fc;
+  --bg-section: #dce7f4;
+  --bg-accent: #98b3d9;
+  --bg-gradient-light: #bbcde5;
+
+  --text-dark: #121e33;
+  --text-secondary: #747d8e;
+  --text-muted: #9ca3b0;
+}
+/* GRID - Main Grid ========================*/
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "navbar navbar"
+    "hero-about hero-about"
+    "about about"
+    "footer footer"
+    "header-bottom header-bottom";
+}
+
+
+/* GRID - hero-about ========================*/
+
+.hero-about {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  text-align: center;
+  min-height: 45vh;
+  padding-top: 60px;
+  margin-top: 75px;
+  background-image: url(../assets/images/hero-background-image.jpg);
+  background-size: cover; /* Ensures the image covers the element */
+  background-position: center; /* Keeps the image centered */
+  background-repeat: no-repeat; /* Prevents tiling */
+}
+.hero-about-item {
+ margin: 10px 10px;
+  padding: 5px 15px;
+  background: var(--bg-light);
+  border-radius: 10px;
+  opacity: 0.8;
+}
+
+.hero-about-item > h1 {
+  font-weight: 700;
+  font-size: 35px;
+  color: var(--blue-dark);
+  animation: fadeIn 3s ease-in-out;
+
+}
+.hero-about-item > p {
+  font-weight: 700;
+  margin-bottom: 35px;
+ color: var(--blue-dark);
+ animation: fadeIn 2s ease-in-out;
+
+}
+
+/* GRID - grid-about ========================*/
+
+.grid-about{
+
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    background-color: var(--bg-light);
+    animation: fadeIn 1s ease-in-out;
+
+}
+.about-item {
+    /* padding: 25px 25px; */
+}
+.about-item > img{
+    margin: 25px 25px;
+    height: 300px;
+    border-radius:10px;
+}
+.about-item > h2{
+   color: var(--blue-primary);
+   margin: 10px 10px;
+   padding: 10px 10px;
+}
+.about-opt{
+    
+    display: flex;
+    align-items: center; /* Vertically centers the items within the container */
+    gap: 5px; 
+    margin: 10px 10px;
+
+}
+.about-opt > img{
+  height: 35px;
+  border-radius: 50%;
+  
+}
+.about-opt > h3{
+    font-weight:500;
+    color: var(--blue-secondary);
+
+}
+
+/* continued ========================*/
+
+/* FLEXBOX about-text ========================*/
+.about-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px 10px;
+}
+.about-text > h2{
+    margin: 10px 10px;
+    color: var(--blue-primary);
+    animation: fadeIn 3s ease-in-out;
+
+}
+.about-text > p{
+    margin: 10px 10px;
+    font-weight: 600;
+    color: var(--blue-secondary);
+    animation: fadeIn 2s ease-in-out;
+
+
+}
+/* FLEXBOX about-cards ========================*/
+.about-cards{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px 15px;
+    gap: 10px;
+}
+
+.about-cards-item{
+  text-align: center;
+  flex: 20%;
+  padding: 20px 20px;
+  width: 12em;
+  height: 16em;
+  border-radius: 10px;
+  background-color: var(--bg-accent);
+
+}
+.about-cards-item > h3{
+color: var(--bg-light);
+font-weight: 800;
+
+}
+.about-cards-item > p{
+color: var(--text-dark);
+font-weight: 600;
+
+}
+
+/* FLEXBOX about-buttons ========================*/
+.about-buttons{
+    display: flex;    
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+     margin: 10px 10px;
+}
+.about-buttons > h2{
+  margin: 10px 10px;
+ color: var(--blue-primary) ;
+}
+.about-buttons img{
+    height: 20px;
+    border-radius: 50%;
+}
+.about-bt-1 button {
+  margin: 15px 15px;
+  padding: 15px 15px;
+  border-radius: 5px;
+
+  font-weight: 700;
+  background-color: var(--blue-primary);
+  color: var(--bg-light);
+  border-style: none;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
+}
+.about-bt-1 button:hover {
+  box-shadow: 4px 0px 6px var(--blue-primary);
+  transform: scale(1.1);
+ 
+}
+.about-bt-2 button {
+  margin: 15px 15px;
+  padding: 15px 15px;
+  border-radius: 5px;
+
+  font-weight: 700;
+  background-color: #25D366;
+  color: var(--bg-light);
+  border-style: none;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
+}
+ .about-bt-2 button:hover {
+  box-shadow: 3px 0px 6px var(--bg-light);
+  transform: scale(1.1);
+}
+ .flex-buttons{
+    display: flex;
+ }
+
+ 
+/* KEYFRAMES ========================*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MEDIA QUERIES ========================*/
+
+@media (max-width: 961px) {
+
+    .grid-about{
+   display: grid;
+   justify-items: center;
+   grid-template-columns: 1fr;
+}
+
+.about-item > img{
+   width: 85%;
+
+}
+.about-cards-item{
+ flex: 100%;
+ /* padding: 20px 20px; */
+}
+
+}
+
+</style>  
+  </head>
+  <body>
+    <!-- Section Main Grid -->
+    <div class="grid-container">
+      <!-- Section navigation -->
+      <div class="grid-item flex-navbar" style="grid-area: navbar;">
+          <div class="outter-nav logo">
+            <a href="../index.html"><img src="../assets/images/logo-navbar.png" alt="logo-image"/></a> 
+          </div>
+
+          <!-- hamburger navigation -->
+         <div class="hamburger">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+              <span></span>
+            </label>
+          <div class="inner-nav">
+              <div class="inner-nav-item">
+                <li><a href="../index.html">Home</a></li>
+              </div>
+              <div class="inner-nav-item ">
+                <li><a href="./services.html">Services</a></li>
+              </div>
+              <div class="inner-nav-item ">
+                <li><a href="./pricing.html">Pricing</a></li>
+              </div>
+              <div class="inner-nav-item active-page">
+                <li><a href="./about.html">About Us</a></li>
+              </div>
+              <div class="inner-nav-item">
+                <li><a href="./contact.html">Contact Us</a></li>
+              </div>
+              <div class="inner-nav-item">
+                <li><a target="_blank" href="https://wa.me/+27748368368"><button class="flex-button"><img src="../assets/icons/whatsapp-icon.PNG" alt="whatsapp-icon">Chat on WhatsApp</button></a></li>
+              </div>
+          </div>
+        </div>  
+      </div>
+      <!-- Hero about Section  -->
+      <div class="grid-item hero-about" style="grid-area: hero-about;">
+      
+          <div class="hero-about-item">
+             <h1>About Us</h1>
+             <p>Excellence in Laundry and Customer Service.</p>
+          </div>
+      </div>
+      <!-- Hero about Section  -->
+      <div class="grid-item grid-about" style="grid-area: about;">
+      
+          <div class="about-item">
+             <div class="about-text">
+                <h2>Welcome to Excelllence Laundry & Coffee Bar</h2>
+                <p>We combine top-notch laundry services with a relaxing coffee bar experience. <br/>Since our establishment we have been dedicated to providing the best laundry car in <br/> a friendly and welcoming environment.</p>
+             </div>
+             <div class="about-cards">
+                <div class="about-cards-item">
+                     <img src="../assets/icons/experience-staff-icon.PNG" alt="experience-staff-icon"/>
+                    <h3>Experienced Staff</h3>
+                     <p>Our team of professional is trained and experienced</p>
+                </div>
+               <div class="about-cards-item">
+                      <img src="../assets/icons/state-of-art-icon.PNG" alt="state-of-art-icon"/>
+                     <h3>State-of-Art Facility</h3>
+                     <p>Mordern Equipment to maximize sustainability, and customer convenience</p>
+                 </div>
+               <div class="about-cards-item">
+                      <img src="../assets/icons/customer-satisfaction-icon.PNG" alt="customer-satisfaction-icon"/>
+                     <h3>Customer Satisifaction</h3>
+                     <p>We prioritize Excellency to give you the best experience.</p>
+                 </div>
+             </div>     
+             <div class="about-buttons">
+                <h2>We look forward to serving you!</h2>
+                <a target="_blank" href="tel:+ 1 (153) 415-3609" class="about-bt-1"><button class="flex-buttons"><img src="../assets/icons/phone-footer-icon.PNG" alt="phone-footer-icon"/><p>+ 1 (153) 415-3609</p></button></a>
+                <a target="_blank" href="https://wa.me/+27748368368" class="about-bt-2"><button class="flex-buttons"><img src="../assets/icons/whatsapp-icon.PNG" alt="whatsapp-icon"/><p>Chat on WhatsApp</p></button></a>
+             </div>
+          </div>
+          <div class="about-item">
+            <img src="../assets/images/about-image.PNG" alt="about-image"/>
+            <h2>Why Choose Us?</h2>
+            
+            <div class="about-opt">
+              <img src="../assets/icons/expert-cleaning-icon.png" alt="expert-cleaning-icon"/>
+              <h3>Excellent laundry options</h3>
+           </div>
+            
+            <div class="about-opt">
+              <img src="../assets/icons/conv-reliable-icon.png" alt="conv-reliable-icon"/>
+              <h3>Pick-up & Return Service</h3>
+           </div>
+            
+            <div class="about-opt">
+              <img src="../assets/icons/modern-comfortable-icon.PNG" alt="modern-comfortable-icon"/>
+              <h3>Relaxing Coffe Bar</h3>
+           </div>
+        
+        </div>
+     
+      </div>
+       
+      <!-- Section footer -->
+      <div class="grid-item footer" style="grid-area: footer">
+        <div class="footer-list">
+          <ul class="footer-item footer-logo">
+            <li><a href="../index.html"><img src="../assets/images/logo-footer.png" alt="footer-logo"/></a></li>
+          </ul>
+        </div>
+        <div class="footer-list">
+          <ul class="footer-item">
+            <li><h2>MENU</h2></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./pricing.html">Pricing</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./contact.html">Contact Us</a></li>
+            <li><a target="_blank" href="https://armel-nzawou-developer.github.io/ArmelDesign/"> <span style="color:#bd9c78;">Design by ArmelDesign★</span> </a></li>
+          </ul>
+        </div>
+        <div class="footer-list">
+          <ul class="footer-item">
+            <li><h2>QUICK LINKS</h2></li>
+            <li><a href="#">Drop & Collect</a></li>
+            <li><a href="./deliveries.html">Pick-up & return</a></li>
+            <li><a href="#">Terms and Conditions</a></li>
+          </ul>
+        </div>
+        <div class="footer-list">
+          <ul class="footer-item">
+            <li><h2>CONNECT</h2></li>
+            <li class="footer-icons"><img src="../assets/icons/phone-footer-icon.PNG" alt="phone-footer-icon"/><a href="tel:+27 (91) - 911 - 9191 "><p>+27 (91) - 911 - 9191</p></a></li>
+            <li class="footer-icons"><img src="../assets/icons/email-footer-icon.PNG" alt="email-footer-icon"/><a href="mailto:info@carrental.com"><p>info@excellencelaundry.com</p></a></li>
+            <li class="footer-icons"><img src="../assets/icons/calendar-footer-icon.PNG" alt="calendar-icon"/> <p>Mon - Fri, 07:00 AM - 06:00 PM</p></li>
+            <li class="footer-icons"><img src="../assets/icons/calendar-footer-icon.PNG" alt="calendar-icon"/> <p>Sat - Sun, 08:00 AM - 01:00 PM</p></li>
+            <li class="footer-icons">
+              <a target="_blank" href="https://www.facebook.com/"><img src="../assets/icons/facebook-footer-icon.png" alt="facebook-footer-icon"/></a>
+              <a target="_blank" href="https://www.instagram.com/"><img src="../assets/icons/instagram-footer-icon.png" alt="instagram-footer-icon"/></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Section header bottom -->
+      <div class="grid-item header-bottom" style="grid-area: header-bottom">
+        <div class="outter-bottom">
+          <img src="../assets/icons/whatsapp-icon.PNG"  alt="whatsapp-icon"/>
+          <a target="_blank" href="https://wa.me/+27748368368">Chat on WhatsApp</a>
+        </div>
+        <div class="inner-bottom">
+          <div class="inner-bottom-item">
+            <img src="../assets/icons/location-bottom-icon.PNG" alt="location-bottom-icon" />
+            <p>1234 Main St. Haston City, State 12345 |</p>
+          </div>
+          <div class="inner-bottom-item">
+            <p> © 2025 Excellence Laundry |</p>
+          </div>
+          <div class="inner-bottom-item">
+            <p>All Rights Reserved. </p>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </body>
+</html>
+  </body>
+</html>
